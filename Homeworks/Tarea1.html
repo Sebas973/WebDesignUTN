@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea 1 - Sebastian Montero Segura</title>
+  <base href="https://www.ejemplo.com/">
+  <link rel="icon" href="https://via.placeholder.com/16">
+  <meta name="description" content="Tarea de HTML5 para Diseño de Aplicaciones Web">
+  <meta name="keywords" content="HTML5, etiquetas, tarea, estructura, SEO">
+  <meta name="author" content="Sebastian Montero Segura">
+</head>
+<body>
+
+  <h1>Tarea 1: Etiquetas HTML5</h1>
+  <p><strong>Nombre:</strong> Sebastian Montero Segura</p>
+  <img src="https://th.bing.com/th/id/OIP.JwEJgEC-hx43MR-2OJa_IQHaHw?rs=1&pid=ImgDetMain" alt="Avatar" width="150">
+
+  <section>
+    <h2>Encabezados</h2>
+    <h1>Encabezado H1</h1>
+    <h2>Encabezado H2</h2>
+    <h3>Encabezado H3</h3>
+    <h4>Encabezado H4</h4>
+    <h5>Encabezado H5</h5>
+    <h6>Encabezado H6</h6>
+
+    <hgroup>
+      <h1>Título Principal</h1>
+      <h2>Subtítulo agrupado</h2>
+    </hgroup>
+
+    <address>
+      Escrito por Sebastian Montero Segura<br>
+      Contacto: <a href="mailto:semonterose@est.utn.ac.cr">semonterose@est.utn.ac.cr</a>
+    </address>
+
+    <div>
+      <p>Esto es una división genérica.</p>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/salY_Sm6mv4?si=eo7j6yRFzrFjgDoD"
+      title="YouTube video" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>Listas y Agrupaciones</h2>
+    <ul>
+      <li>Elemento de lista desordenada</li>
+    </ul>
+    <ol>
+      <li>Elemento de lista ordenada</li>
+    </ol>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Lenguaje de marcado para la web</dd>
+    </dl>
+
+    <figure>
+      <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/vintage-camera-c10k-otri-park.jpg" alt="Imagen de ejemplo" width="250" height="250">
+      <figcaption>Ejemplo de figura</figcaption>
+    </figure>
+
+    <details>
+      <summary>Haz clic para ver más</summary>
+      Este es el contenido oculto.
+    </details>
+
+    <dialog open>Este es un diálogo abierto</dialog>
+  </section>
+
+  <section>
+    <h2>Texto y formato</h2>
+    <p>Este es un párrafo.</p>
+    <br>
+    <pre>Texto    con     espacios      preformateados</pre>
+    <blockquote>Cita larga de otra fuente.</blockquote>
+    <q>Cita corta</q>
+    <cite>Libro de HTML</cite>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+    <dfn title="Lenguaje usado para crear sitios web">HTML</dfn>
+    <p><code>console.log("Hola");</code></p>
+    <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd></p>
+    <b>Texto en negrita</b><br>
+    <strong>Texto fuerte</strong><br>
+    <i>Texto en cursiva</i><br>
+    <em>Texto enfático</em><br>
+    <mark>Texto resaltado</mark><br>
+    <small>Texto pequeño</small><br>
+    <del>Texto eliminado</del><br>
+    <ins>Texto insertado</ins><br>
+    <sub>subíndice</sub><br>
+    <sup>superíndice</sup><br>
+    <time datetime="2025-05-22">22 de mayo de 2025</time><br>
+    <data value="12345">ID del producto</data><br>
+    <span>Texto dentro de un span</span>
+  </section>
+
+  <section>
+    <h2>Enlaces</h2>
+    <a href="https://www.google.com" target="_blank">Ir a Google</a><br>
+
+    <img src="https://www.topgadget.com.br/wp-content/uploads/2020/09/html.jpg" usemap="#mapa1" alt="Mapa de imagen" width="250" height="250">
+    <map name="mapa1">
+      <area shape="rect" coords="0,0,200,200" href="https://es.wikipedia.org/wiki/HTML" alt="Área 1">
+    </map>
+  </section>
+
+  <section>
+    <h2>Imágenes</h2>
+    <img src="https://i1.wp.com/www.stugon.com/wp-content/uploads/2014/02/unsplash-free-stock-photo.jpg" alt="Imagen simple" width="250" height="250">
+    
+    <picture>
+      <source media="(min-width: 800px)" srcset="https://s2.best-wallpaper.net/wallpaper/1280x1024/1707/Black-puppy-sleep_1280x1024.jpg" width="250" height="250">
+      <source media="(min-width: 400px)" srcset="https://live.staticflickr.com/8571/28447140316_8d731a9e7a_b.jpg" width="250" height="250">
+      <img src="https://img.freepik.com/premium-photo/closeup-shot-black-labrador-retriever_665346-36023.jpg" alt="Imagen adaptable">
+    </picture>
+
+    <canvas id="lienzo" width="100" height="100">Tu navegador no soporta canvas</canvas>
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+  </section>
+
+  <section>
+    <h2>Multimedia</h2>
+
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio><br>
+
+    <video width="320" height="240" controls>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+      Tu navegador no soporta video.
+    </video>
+  </section>
+
+</body>
+</html>
