@@ -32,7 +32,7 @@ body {
     width: 200px;
     height: 150px;
     background-color: lightblue;
-    top: 50px;
+    top: 180px;
     left: 50px;
 }
 
@@ -41,8 +41,8 @@ body {
     width: 200px;
     height: 150px;
     background-color: lightgreen;
-    top: 50;
-    left: 475;
+    top: 180px;
+    left: 465px;
 }
 
 .float-left {
