@@ -1,0 +1,115 @@
+.caja-block {
+    display: block;  /* Elemento de bloque */
+    width: 200px;
+    padding: 10px;
+    border: 2px solid blue;
+    margin: 20px;
+}
+
+.caja-en-linea {
+    display: inline;  /* Elemento en línea */
+    padding: 5px;
+    border: 1px dashed red;
+    margin: 5px;
+}
+
+.caja-relative {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: lightcoral;
+    top: -5px;
+    left: 250px; 
+}
+
+.caja-absolute {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+    top: 50px;
+    left: 50px;
+}
+
+.caja-fixed {
+    position: fixed;
+    width: 200px;
+    height: 150px;
+    background-color: lightgreen;
+    top: 50;
+    left: 475;
+}
+
+.float-left {
+    float: left;
+    width: 45%;
+    background-color: lightblue;
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+    width: 45%;
+    background-color: lightgreen;
+    margin-left: 10px;
+}
+
+.clear-both {
+    clear: both;
+    background-color: lightcoral;
+    height: 50px;
+}
+
+.block-element {
+    display: block;
+    width: 200px;
+    background-color: lightcoral;
+    margin: 10px 0;
+}
+
+.inline-element {
+    display: inline;
+    width: 200px;
+    background-color: lightblue;
+    margin: 5px;
+}
+
+.inline-block-element {
+    display: inline-block;
+    width: 200px;
+    background-color: lightgreen;
+    margin: 5px;
+}
+
+.overflow-example {
+    width: 100px;
+    height: 100px;
+    overflow: auto; 
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.hidden-element {
+    visibility: hidden;
+    background-color: lightgreen;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+
+.box1 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+    z-index: 1;
+}
+
+.box2 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: lightcoral;
+    top: -100px; 
+    z-index: 2;
+}
