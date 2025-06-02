@@ -1,77 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tarea 2</title>
-  <base target="_blank" href="https://sebas973.github.io/WebDesignUTN/">
-  <link rel="stylesheet" type="text/css" href="Styles/Tarea2Styles.css" />
-  <meta name="description" content="Tarea 2 Diseño de aplicaciones web">
-  <meta name="keywords" content="Inline, Block, Flexbox, Position">
-  <meta name="author" content="Sebastian Montero Segura">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tarea 2</title>
+    <base target="_blank" href="https://sebas973.github.io/WebDesignUTN/">
+    <link rel="stylesheet" type="text/css" href="Styles/Tarea2Styles.css" />
+    <meta name="description" content="Tarea 2 Diseño de aplicaciones web">
+    <meta name="keywords" content="Inline, Block, Flexbox, Position">
+    <meta name="author" content="Sebastian Montero Segura">
 </head>
 
 <body>
-    <div class="caja-block">
+
+    <section name="Modelo de Caja (Box Model)">
+        <div class="caja-block">
         Este es un div con padding, borde y margen.
     </div>
 
     <span class="caja-en-linea">Elemento en línea</span>
     <span class="caja-en-linea">Otro elemento en línea</span>
 
-    <h2>Ejemplo de Position</h2>
-    <div class="caja-relative">Caja Relative</div>
-    <div class="caja-absolute">Caja Absolute</div>
-    <div class="caja-fixed">Caja Fixed</div>
+    </section>
 
-    <h2>Ejemplo de Float y Clear</h2>
-    <div class="float-left">Elemento flotante a la izquierda</div>
-    <div class="float-right">Elemento flotante a la derecha</div>
-    <div class="clear-both">Este div usa clear: both</div>
+    <section name="Propiedades de estilo que permite la visualización y posicionamiento de elementos">
+        <h2>Ejemplo de Position</h2>
+        <div class="caja-relative">Caja Relative</div>
+        <div class="caja-absolute">Caja Absolute</div>
+        <div class="caja-fixed">Caja Fixed</div>
 
-    <h2>Ejemplo de Display</h2>
-    <div class="block-element">Elemento de tipo block</div>
-    <span class="inline-element">Elemento de tipo inline</span>
-    <span class="inline-block-element">Elemento de tipo inline-block</span>
+        <h2>Ejemplo de Float y Clear</h2>
+        <div class="float-left">Elemento flotante a la izquierda</div>
+        <div class="float-right">Elemento flotante a la derecha</div>
+        <div class="clear-both">Este div usa clear: both</div>
 
-    <h2>Ejemplo de Overflow</h2>
-    <div class="overflow-example">
-        Este es un contenido muy largo que va a necesitar barras de desplazamiento cuando sobrepase el tamaño del contenedor.
-    </div>
+        <h2>Ejemplo de Display</h2>
+        <div class="block-element">Elemento de tipo block</div>
+        <span class="inline-element">Elemento de tipo inline</span>
+        <span class="inline-block-element">Elemento de tipo inline-block</span>
 
-    <h2>Ejemplo de Visibility</h2>
-    <div class="hidden-element">Este elemento está oculto, pero ocupa espacio</div>
+        <h2>Ejemplo de Overflow</h2>
+        <div class="overflow-example">
+            Este es un contenido muy largo que va a necesitar barras de desplazamiento cuando sobrepase el tamaño del
+            contenedor.
+        </div>
 
-    <h2>Ejemplo de Z-Index</h2>
-    <div class="box1">Caja 1 (z-index: 1)</div>
-    <div class="box2">Caja 2 (z-index: 2)</div>
+        <h2>Ejemplo de Visibility</h2>
+        <div class="hidden-element">Este elemento está oculto, pero ocupa espacio</div>
 
-  <div class="section">
-    <h2 class="flex-title">Flex Container</h2>
-    <div class="flex-container">
-      <div class="flex-item">Elemento 1</div>
-      <div class="flex-item">Elemento 2</div>
-      <div class="flex-item">Elemento 3</div>
-    </div>
-  </div>
+        <h2>Ejemplo de Z-Index</h2>
+        <div class="box1">Caja 1 (z-index: 1)</div>
+        <div class="box2">Caja 2 (z-index: 2)</div>
 
-  <div class="section">
-    <h2 class="flex-title">Flex Responsive</h2>
-    <div class="flex-responsive">
-      <div class="flex-responsive-item">Elemento A</div>
-      <div class="flex-responsive-item">Elemento B</div>
-      <div class="flex-responsive-item">Elemento C</div>
-    </div>
-  </div>
+    </section>
 
-  <div class="section">
-    <h2 class="flex-title">Flex Items</h2>
-    <div class="flex-items-container">
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-    </div>
-  </div>
+    <section name="Flexbox en CSS3">
+        <div class="section">
+            <h2 class="flex-title">Flex Container</h2>
+            <div class="flex-container">
+                <div class="flex-item">Elemento 1</div>
+                <div class="flex-item">Elemento 2</div>
+                <div class="flex-item">Elemento 3</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flex-title">Flex Responsive</h2>
+            <div class="flex-responsive">
+                <div class="flex-responsive-item">Elemento A</div>
+                <div class="flex-responsive-item">Elemento B</div>
+                <div class="flex-responsive-item">Elemento C</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="flex-title">Flex Items</h2>
+            <div class="flex-items-container">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+            </div>
+        </div>
+    </section>
 
 </body>
 
