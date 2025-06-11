@@ -41,6 +41,145 @@
     transform: translateX(0);
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin-top: 25px;
+    margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.image-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text-section {
+  max-width: 550px;
+}
+
+.text-section h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: green;
+  margin-right: 10px;
+}
+
+.btn-green {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-green:hover {
+  background-color: #218838;
+}
+
+.features-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, orange, green, red);
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.section-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #555;
+  font-size: 16px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.feature-card h4 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.feature-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #28a745;
+  color: #28a745;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  font-size: 14px;
+}
+
+.feature-card a:hover {
+  background-color: #28a745;
+  color: white;
+}
+
 
 
 
