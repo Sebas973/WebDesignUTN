@@ -42,145 +42,279 @@
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin-top: 25px;
     margin-bottom: 50px;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .image-section img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .text-section {
-  max-width: 550px;
+    max-width: 550px;
 }
 
 .text-section h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .text-section p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
 }
 
 .icon {
-  color: green;
-  margin-right: 10px;
+    color: green;
+    margin-right: 10px;
 }
 
 .btn-green {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .btn-green:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
 .features-section {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .section-header {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.section-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, orange, green, red);
+    margin: 0 auto 10px;
+    border-radius: 2px;
+}
+
+.section-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #555;
+    font-size: 16px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    max-width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.feature-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #28a745;
+    color: #28a745;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.feature-card a:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.productos-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .section-line {
   width: 60px;
   height: 4px;
-  background: linear-gradient(to right, orange, green, red);
+  background: linear-gradient(to right, red, green);
   margin: 0 auto 10px;
   border-radius: 2px;
 }
 
 .section-header h1 {
   font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .section-header p {
-  color: #555;
   font-size: 16px;
-}
-
-.features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.feature-card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 30px 20px;
-  max-width: 300px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-.feature-card img {
-  width: 60px;
-  margin-bottom: 20px;
-}
-
-.feature-card h4 {
-  font-size: 18px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  font-size: 14px;
   color: #555;
-  margin-bottom: 20px;
 }
 
-.feature-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #28a745;
+.product-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background-color: white;
+  border: 1px solid #28a745;
   color: #28a745;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.feature-card a:hover {
+.tab.active {
   background-color: #28a745;
   color: white;
 }
 
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
 
+.product-card:hover {
+  transform: translateY(-5px);
+}
 
+.product-card img {
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  width: 100%;
+}
 
+.product-card h4 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions a {
+  text-decoration: none;
+  color: #28a745;
+  border: 1px solid #28a745;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.actions a:hover {
+  background: #28a745;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h1 {
+    font-size: 24px;
+  }
+
+  .tab {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
