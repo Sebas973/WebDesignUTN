@@ -41,6 +41,8 @@
     transform: translateX(0);
 }
 
+/*** Mejores Frutas Start ***/
+
 .container {
     display: flex;
     align-items: center;
@@ -98,6 +100,8 @@
 .btn-green:hover {
     background-color: #218838;
 }
+
+/*** Nos Caracteríz Start ***/
 
 .features-section {
     padding: 60px 20px;
@@ -179,6 +183,8 @@
     background-color: #28a745;
     color: white;
 }
+
+/*** Productos Start ***/
 
 .productos-section {
   padding: 40px 20px;
