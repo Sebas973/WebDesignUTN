@@ -302,11 +302,67 @@
   color: white;
 }
 
+.fincas-section {
+    background-color: #3CB521; /* verde de fondo */
+    padding: 40px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenido en flex horizontal */
+.fincas-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para hacer responsivo */
+}
+
+/* Texto */
+.fincas-text {
+    max-width: 600px;
+}
+
+.fincas-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.fincas-description {
+    line-height: 1.6;
+    color: #d6fcd4; /* tono claro */
+}
+
+/* Botón */
+.fincas-button-container {
+    margin-top: 20px;
+}
+
+.fincas-button {
+    background-color: #F2471C; /* color naranja */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .product-card {
     width: 100%;
   }
+
+  .fincas-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fincas-button-container {
+        align-self: center;
+    }
 }
 
 @media (max-width: 480px) {
