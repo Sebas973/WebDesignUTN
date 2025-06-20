@@ -1,0 +1,17 @@
+section {
+    margin-bottom: 40px;
+}
+
+.resultado {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+h2 {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}

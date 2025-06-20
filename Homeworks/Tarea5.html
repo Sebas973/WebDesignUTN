@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tarea 5 Diseño de aplicaciones web">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sebastian Montero Segura">
+    <base target="_blank" href="https://sebas973.github.io/WebDesignUTN/">
+    <title>Ejemplos de JavaScript</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="Styles/Tarea5Styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1 class="text-center mb-5">Ejemplos Interactivos de Sintaxis JavaScript</h1>
+
+        <section id="Flujo-Errores">
+            <h2>Control de Flujo y Manejo de Errores</h2>
+            <button class="btn btn-outline-primary mb-2" onclick="ejemploIfElse()">if...else</button>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Mayor de edad">
+                <label class="form-check-label" for="flexRadioDefault1">Mayor de edad</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Menor de edad">
+                <label class="form-check-label" for="flexRadioDefault2">Menor de edad</label>
+            </div>
+
+            <div id="resultadoIfElse" class="resultado"></div>
+
+            <button class="btn btn-outline-primary mb-2" onclick="ejemploSwitch()">switch</button>
+            <div id="resultadoSwitch" class="resultado"></div>
+
+            <button class="btn btn-outline-primary mb-2" onclick="ejemploTryCatch()">try / catch / throw</button>
+            <div id="resultadoTryCatch" class="resultado"></div>
+        </section>
+
+        <section id="Bucles-Iteracion">
+            <h2>Bucles e Iteración</h2>
+            <button class="btn btn-outline-success mb-2" onclick="ejemploFor()">for</button>
+            <div id="resultadoFor" class="resultado"></div>
+
+            <button class="btn btn-outline-success mb-2" onclick="ejemploWhile()">while</button>
+            <div id="resultadoWhile" class="resultado"></div>
+
+            <button class="btn btn-outline-success mb-2" onclick="ejemploDoWhile()">do...while</button>
+            <div id="resultadoDoWhile" class="resultado"></div>
+        </section>
+
+        <section id="Funciones">
+            <h2>Funciones</h2>
+            <button class="btn btn-outline-dark mb-2" onclick="ejemploFuncion()">Llamar función</button>
+            <div id="resultadoFuncion" class="resultado"></div>
+        </section>
+
+        <section id="Expresiones-Operadores">
+            <h2>Expresiones y Operadores</h2>
+            <button class="btn btn-outline-warning mb-2" onclick="ejemploOperadores()">Ver operadores</button>
+            <div id="resultadoOperadores" class="resultado"></div>
+        </section>
+
+        <section id="Numeros-Fechas">
+            <h2>Números y Fechas</h2>
+            <button class="btn btn-outline-info mb-2" onclick="ejemploFechas()">Mostrar fecha y PI</button>
+            <div id="resultadoFechas" class="resultado"></div>
+        </section>
+
+        <section id="Formateo-Texto">
+            <h2>Formateo de Texto</h2>
+            <button class="btn btn-outline-secondary mb-2" onclick="ejemploTexto()">Transformar texto</button>
+            <div id="resultadoTexto" class="resultado"></div>
+        </section>
+
+        <section id="Arreglos-Colecciones">
+            <h2>Colecciones Indexadas (Arreglos)</h2>
+            <button class="btn btn-outline-success mb-2" onclick="ejemploArreglos()">Mostrar arreglo</button>
+            <div id="resultadoArreglos" class="resultado"></div>
+        </section>
+
+        <section id="DOM">
+            <h2>Manipulación del DOM</h2>
+            <p id="demo">Este texto será modificado por JavaScript.</p>
+            <button class="btn btn-outline-danger"
+                onclick="document.getElementById('demo').innerText = '¡Texto modificado con JavaScript!'">
+                Cambiar texto
+            </button>
+        </section>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function ejemploIfElse() {
+            let selectedValue = document.querySelector('input[name="flexRadioDefault"]:checked').value;
+            document.getElementById("resultadoIfElse").innerText = selectedValue == 'Mayor de edad' ? "Eres mayor de edad" : "Eres menor de edad";
+        }
+
+        function ejemploSwitch() {
+            let dia = "lunes";
+            let mensaje;
+            switch (dia) {
+                case "lunes":
+                    mensaje = "Inicio de semana";
+                    break;
+                case "viernes":
+                    mensaje = "Fin de semana cercano";
+                    break;
+                default:
+                    mensaje = "Otro día";
+            }
+            document.getElementById("resultadoSwitch").innerText = mensaje;
+        }
+
+        function ejemploTryCatch() {
+            try {
+                throw new Error("Algo salió mal");
+            } catch (e) {
+                document.getElementById("resultadoTryCatch").innerText = e.message;
+            }
+        }
+
+        function ejemploFor() {
+            let salida = "";
+            for (let i = 0; i < 3; i++) {
+                salida += `i = ${i}\n`;
+            }
+            document.getElementById("resultadoFor").innerText = salida;
+        }
+
+        function ejemploWhile() {
+            let x = 0, salida = "";
+            while (x < 3) {
+                salida += `x = ${x}\n`;
+                x++;
+            }
+            document.getElementById("resultadoWhile").innerText = salida;
+        }
+
+        function ejemploDoWhile() {
+            let y = 0, salida = "";
+            do {
+                salida += `y = ${y}\n`;
+                y++;
+            } while (y < 3);
+            document.getElementById("resultadoDoWhile").innerText = salida;
+        }
+
+        function ejemploFuncion() {
+            function saludar(nombre) {
+                return `Hola, ${nombre}`;
+            }
+            document.getElementById("resultadoFuncion").innerText = saludar("Juan");
+        }
+
+        function ejemploOperadores() {
+            let suma = 2 + 3;
+            let comparacion = 5 > 2;
+            let logico = true && false;
+            document.getElementById("resultadoOperadores").innerText =
+                `2 + 3 = ${suma}\n5 > 2 = ${comparacion}\ntrue && false = ${logico}`;
+        }
+
+        function ejemploFechas() {
+            let fecha = new Date().toLocaleString();
+            let pi = Math.PI.toFixed(5);
+            document.getElementById("resultadoFechas").innerText = `Fecha actual: ${fecha}\nPI: ${pi}`;
+        }
+
+        function ejemploTexto() {
+            let texto = "hola mundo";
+            document.getElementById("resultadoTexto").innerText = `Original: ${texto}\nMayúsculas: ${texto.toUpperCase()}`;
+        }
+
+        function ejemploArreglos() {
+            let frutas = ["Manzana", "Banana", "Pera"];
+            document.getElementById("resultadoArreglos").innerText =
+                `Frutas: ${frutas.join(", ")}\nPrimera: ${frutas[0]}`;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
