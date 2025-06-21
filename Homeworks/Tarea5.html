@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,26 +22,47 @@
 
         <section id="Flujo-Errores">
             <h2>Control de Flujo y Manejo de Errores</h2>
-            <button class="btn btn-outline-primary mb-2" onclick="ejemploIfElse()">if...else</button>
-
+            <h4>Eres Mayor de Edad?</h4>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                <input class="form-check-input" type="radio" name="flexRadioIfElse" id="flexRadioDefault1"
                     value="Mayor de edad">
                 <label class="form-check-label" for="flexRadioDefault1">Mayor de edad</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                <input class="form-check-input" type="radio" name="flexRadioIfElse" id="flexRadioDefault2"
                     value="Menor de edad">
                 <label class="form-check-label" for="flexRadioDefault2">Menor de edad</label>
             </div>
 
-            <div id="resultadoIfElse" class="resultado"></div>
+            <button class="btn btn-outline-primary mb-2" onclick="ejemploIfElse()">if...else</button>
+
+            <div id="resultadoIfElse" class="resultado mb-4"></div>
+
+            <h4>Selecciona un dia</h4>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioSwitch" id="flexRadioDefault1"
+                    value="Lunes">
+                <label class="form-check-label" for="flexRadioDefault1">Lunes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioSwitch" id="flexRadioDefault2"
+                    value="Viernes">
+                <label class="form-check-label" for="flexRadioDefault2">Viernes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioSwitch" id="flexRadioDefault2" value="">
+                <label class="form-check-label" for="flexRadioDefault3">Otro día</label>
+            </div>
 
             <button class="btn btn-outline-primary mb-2" onclick="ejemploSwitch()">switch</button>
-            <div id="resultadoSwitch" class="resultado"></div>
 
+            <div id="resultadoSwitch" class="resultado mb-4"></div>
+
+            <h4>Haz click para generar un error</h4>
             <button class="btn btn-outline-primary mb-2" onclick="ejemploTryCatch()">try / catch / throw</button>
             <div id="resultadoTryCatch" class="resultado"></div>
+
         </section>
 
         <section id="Bucles-Iteracion">
@@ -58,6 +79,7 @@
 
         <section id="Funciones">
             <h2>Funciones</h2>
+            <input class="form-control mb-2" type="text" placeholder="Digita tu nombre" aria-label="input-funcion">
             <button class="btn btn-outline-dark mb-2" onclick="ejemploFuncion()">Llamar función</button>
             <div id="resultadoFuncion" class="resultado"></div>
         </section>
@@ -76,6 +98,7 @@
 
         <section id="Formateo-Texto">
             <h2>Formateo de Texto</h2>
+            <input class="form-control mb-2" type="text" placeholder="Digita una frase" aria-label="input-texto">
             <button class="btn btn-outline-secondary mb-2" onclick="ejemploTexto()">Transformar texto</button>
             <div id="resultadoTexto" class="resultado"></div>
         </section>
@@ -83,34 +106,40 @@
         <section id="Arreglos-Colecciones">
             <h2>Colecciones Indexadas (Arreglos)</h2>
             <button class="btn btn-outline-success mb-2" onclick="ejemploArreglos()">Mostrar arreglo</button>
-            <div id="resultadoArreglos" class="resultado"></div>
+            <div id="resultadoArreglos" class="resultado mb-2"></div>
+            <div id="resultadoArreglosTipados" class="resultado mb-2"></div>
         </section>
 
         <section id="DOM">
             <h2>Manipulación del DOM</h2>
-            <p id="demo">Este texto será modificado por JavaScript.</p>
-            <button class="btn btn-outline-danger"
-                onclick="document.getElementById('demo').innerText = '¡Texto modificado con JavaScript!'">
+
+            <p id="by-id">Este texto será modificado por ID.</p>
+            <span>Este texto será modificado por nombre de etiqueta.</span>
+            <p class="by-class">Este texto será modificado por nombre de clase.</p>
+            <p class="by-CSS">Este texto será modificado mediante selectores CSS.</p>
+
+            <button class="btn btn-outline-danger" onclick="ejemploDOM()">
                 Cambiar texto
             </button>
+
         </section>
     </div>
 
     <!-- Script JavaScript -->
     <script>
         function ejemploIfElse() {
-            let selectedValue = document.querySelector('input[name="flexRadioDefault"]:checked').value;
+            let selectedValue = document.querySelector('input[name="flexRadioIfElse"]:checked').value;
             document.getElementById("resultadoIfElse").innerText = selectedValue == 'Mayor de edad' ? "Eres mayor de edad" : "Eres menor de edad";
         }
 
         function ejemploSwitch() {
-            let dia = "lunes";
+            let dia = document.querySelector('input[name="flexRadioSwitch"]:checked').value;
             let mensaje;
             switch (dia) {
-                case "lunes":
+                case "Lunes":
                     mensaje = "Inicio de semana";
                     break;
-                case "viernes":
+                case "Viernes":
                     mensaje = "Fin de semana cercano";
                     break;
                 default:
@@ -157,7 +186,16 @@
             function saludar(nombre) {
                 return `Hola, ${nombre}`;
             }
-            document.getElementById("resultadoFuncion").innerText = saludar("Juan");
+
+            let inputNombre = document.querySelector('input[aria-label="input-funcion"]').value;
+
+            if (inputNombre == '') {
+                alert('Por favor digita un nombre')
+                return
+            } else {
+                document.getElementById("resultadoFuncion").innerText = saludar(`${inputNombre}`);
+            }
+
         }
 
         function ejemploOperadores() {
@@ -175,14 +213,56 @@
         }
 
         function ejemploTexto() {
-            let texto = "hola mundo";
-            document.getElementById("resultadoTexto").innerText = `Original: ${texto}\nMayúsculas: ${texto.toUpperCase()}`;
+            let texto = document.querySelector('input[aria-label="input-texto"]').value;
+            document.getElementById("resultadoTexto").innerText = `Original: ${texto}\nMayúsculas: ${texto.toUpperCase()}\nMinuscula: ${texto.toLowerCase()}\nLargo del String: ${texto.length}`;
         }
 
-        function ejemploArreglos() {
+        function ejemploArreglosNoTipados() {
             let frutas = ["Manzana", "Banana", "Pera"];
             document.getElementById("resultadoArreglos").innerText =
-                `Frutas: ${frutas.join(", ")}\nPrimera: ${frutas[0]}`;
+                `Lista Frutas: ${frutas.join(", ")}\nPrimera: ${frutas[0]}`;
+        }
+
+        function ejemploArreglos(){
+            ejemploArreglosNoTipados();
+            ejemploArreglosTipados();
+        }
+
+        function ejemploArreglosTipados() {
+            let buffer = new ArrayBuffer(12);
+            const int32View = new Int32Array(buffer);
+            let total = 0;
+
+            int32View[0] = 5;
+            int32View[1] = 6;
+            int32View[2] = 7;
+
+            for (let i = 0; i < int32View.length; i++) {
+                total += int32View[i];
+            }
+
+            document.getElementById("resultadoArreglosTipados").innerText = `Lista Tipada: ${int32View.join(", ")}\nTotal: ${total}`;
+        }
+
+        function ejemploDOM() {
+
+            document.getElementById('by-id').innerText = '¡Texto modificado con ID!'
+
+            const listaDOM = document.getElementById("DOM");
+            const listaSpan = listaDOM.getElementsByTagName("span");
+            for (let i = 0; i < listaSpan.length; i++) {
+                listaSpan[i].innerText = '¡Texto modificado con nombre de Etiqueta!';
+            }
+
+            const listaClase = document.getElementsByClassName("by-class");
+            for (let i = 0; i < listaClase.length; i++) {
+                listaClase[i].innerText = '¡Texto modificado con nombre de clase!';
+            }
+
+            const listaCSS = document.querySelectorAll("p.by-CSS");
+            for (let i = 0; i < listaCSS.length; i++) {
+                listaCSS[i].innerText = '¡Texto modificado mediante selectores CSS!';
+            }
         }
     </script>
 
