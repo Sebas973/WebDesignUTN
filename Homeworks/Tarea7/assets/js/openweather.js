@@ -11,7 +11,8 @@ function cargarClima() {
         $("#tem").text(data.main.temp);
         $("#hum").text(data.main.humidity);
         $("#vie").text(data.wind.speed);
-        $("#tiempoIcon").html(`<img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="${data.weather[0].description}">`);
+        $('img#tiempoIcon').attr('src', `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+        $('img#tiempoIcon').attr('alt', data.weather[0].description);
     });
 }
 
@@ -21,7 +22,7 @@ $(document).ready(function () {
             lat = position.coords.latitude;
             lon = position.coords.longitude;
             cargarClima();
-        }, function () {
+        }, function (error) {
             alert("No se pudo obtener la ubicación.");
         });
     } else {
