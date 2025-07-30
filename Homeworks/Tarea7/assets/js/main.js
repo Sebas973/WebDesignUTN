@@ -210,19 +210,3 @@
   });
 
 })()
-
-async function getJsonApi(url) {
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const arrayJson = await response.json();
-
-        return arrayJson;
-
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}

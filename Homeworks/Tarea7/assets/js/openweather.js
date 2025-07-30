@@ -23,6 +23,7 @@ $(document).ready(function () {
             lon = position.coords.longitude;
             cargarClima();
         }, function (error) {
+            console.error('Error fetching data:', error);
             alert("No se pudo obtener la ubicación.");
         });
     } else {
