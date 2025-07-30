@@ -1,5 +1,5 @@
 let lat, lon;
-const apiKey = "15b824eb183f26622400a5b8b84dbebc"; // Reemplaza con tu API key personal
+const apiKey = "15b824eb183f26622400a5b8b84dbebc"; 
 
 function cargarClima() {
     if (!lat || !lon) return;
