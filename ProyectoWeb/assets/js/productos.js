@@ -1,5 +1,5 @@
 function cargarProductos() {
-    const url = `https://restcountries.com/v3.1/all?fields=name,cca3`;
+    const url = `https://sebas973.github.io/WebDesignUTN/ProyectoWeb/assets/json/Productos.json`;
 
     $.getJSON(url, function (data) {
         $.each(data, function (index, producto) {
