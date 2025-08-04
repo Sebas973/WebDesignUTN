@@ -7,7 +7,7 @@ function cargarPortafolio() {
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/${posts.ImageId}/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width:100%; margin:0 auto;"></blockquote>
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/${posts.imageId}/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="width:100%; margin:0 auto;"></blockquote>
                     </div>
                 </div>
             </div>
@@ -16,4 +16,8 @@ function cargarPortafolio() {
             $('#InstagramPostsContainer').append(cardHTML);
         })
     });
+
+    if (window.instgrm) {
+        window.instgrm.Embeds.process();
+    }
 }
