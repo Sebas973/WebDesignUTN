@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Eterna Bootstrap Template</title>
+  <title>Valerita's Nails - Productos</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -28,6 +28,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Eterna
@@ -82,7 +84,7 @@
 
 </header>
 
-<main class="main">
+<main class="main" onload="cargarProductos()">
 
   <!-- Page Title -->
   <div class="page-title" data-aos="fade">
@@ -97,61 +99,18 @@
     </div>
   </div><!-- End Page Title -->
 
-  <!-- Services Section -->
+  <!-- Productos Section -->
   <section id="services" class="services section">
 
     <div class="container">
 
       <div class="container py-4">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Gel X</h5>
-                <p>Las uñas Gel X son una extensión suave y flexible que se adhiere completamente a tu uña natural usando gel. Son ligeras, cómodas y perfectas si buscas longitud sin dañar tus uñas. ¡Ideales para quienes aman cambiar de look con frecuencia!</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Polygel</h5>
-                <p>El Polygel combina lo mejor del acrílico y el gel: es más ligero que el acrílico pero más fuerte que el gel tradicional. Se moldea fácilmente para lograr la forma deseada y ofrece un acabado duradero, sin olores fuertes. Perfecto para looks resistentes y elegantes.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Rubber - Naturales</h5>
-                <p>El rubber base (o base de caucho) se aplica sobre la uña natural para fortalecerla, corregir imperfecciones y lograr un acabado suave y resistente. No alarga la uña, pero la protege. Es ideal si quieres mantener tus uñas cortas pero impecables.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="assets/img/Autor.png" class="card-img-top" alt="Descripción de la imagen">
-              <div class="card-body">
-                <h5 class="card-title">Esmaltado Semipermanente</h5>
-                <p>Es un esmalte que se cura con lámpara UV/LED y dura entre 2 y 3 semanas sin descascararse. No daña la uña natural y es perfecto para quienes desean un look pulido y duradero sin extensiones.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productContainer"></div>
       </div>
 
     </div>
 
-  </section><!-- /Services Section -->
+  </section><!-- /Productos Section -->
 
 </main>
 
