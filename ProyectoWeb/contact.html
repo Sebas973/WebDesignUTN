@@ -29,6 +29,13 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    #map {
+      height: 450px;
+      width: 100%;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: Eterna
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -137,92 +144,93 @@
           </div><!-- End Info Item -->
 
         </div>
+        
 
         <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe
+          <div class="col-lg-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div id="map"></div>
+            <!--<iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.5394529786013!2d-84.1923741237998!3d10.080037138542126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0f6d6cb21fe87%3A0xcb5c52b27c727260!2sParroquia%20de%20San%20Isidro!5e1!3m2!1ses-419!2scr!4v1754249154493!5m2!1ses-419!2scr"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
+              referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+              End Google Maps -->
+          </div>
 
-          <div class="col-lg-6">
-            <form class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-                <h1 class="text-center">Agenda tu cita:</h1>
-                <div class="col-md-6">
-                  <p>Nombre Completo:</p>
-                  <input type="text" name="name" class="form-control" placeholder="" required="">
-                </div>
+        <div class="col-lg-6">
+          <form class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <div class="row gy-4">
+              <h1 class="text-center">Agenda tu cita:</h1>
+              <div class="col-md-6">
+                <p>Nombre Completo:</p>
+                <input type="text" name="name" class="form-control" placeholder="" required="">
+              </div>
 
-                <div class="col-md-6 ">
-                  <p>Email:</p>
-                  <input type="email" class="form-control" name="email" placeholder="" required="">
-                </div>
+              <div class="col-md-6 ">
+                <p>Email:</p>
+                <input type="email" class="form-control" name="email" placeholder="" required="">
+              </div>
 
-                <div class="col-md-12">
-                  <p>Fecha de Nacimiento:</p>
-                  <input type="date" class="form-control" name="FechaNacimiento" placeholder="" required="">
-                </div>
+              <div class="col-md-12">
+                <p>Fecha de Nacimiento:</p>
+                <input type="date" class="form-control" name="FechaNacimiento" placeholder="" required="">
+              </div>
 
-                <div class="col-md-12">
-                  <p>Rango de Ingreso:</p>
-                  <input type="number" class="form-control" name="subject" placeholder="" required="">
-                </div>
+              <div class="col-md-12">
+                <p>Rango de Ingreso:</p>
+                <input type="number" class="form-control" name="subject" placeholder="" required="">
+              </div>
 
-                <div class="col-md-12 ">
-                  <p>Género:</p>
-                  <div class="d-flex justify-content-evenly flex-wrap">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="F">
-                      <label class="form-check-label" for="inlineRadio1">Femenino</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="M">
-                      <label class="form-check-label" for="inlineRadio2">Masculino</label>
-                    </div>
+              <div class="col-md-12 ">
+                <p>Género:</p>
+                <div class="d-flex justify-content-evenly flex-wrap">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="F">
+                    <label class="form-check-label" for="inlineRadio1">Femenino</label>
                   </div>
-
-                </div>
-
-                <div class="col-md-12">
-                  <p>Grado Académico:</p>
-                  <div class="d-flex justify-content-evenly flex-wrap">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                      <label class="form-check-label" for="inlineCheckbox1">Educacion Media</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                      <label class="form-check-label" for="inlineCheckbox2">Bachillerato</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                      <label class="form-check-label" for="inlineCheckbox3">Licenciatura</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                      <label class="form-check-label" for="inlineCheckbox3">Maestría</label>
-                    </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="M">
+                    <label class="form-check-label" for="inlineRadio2">Masculino</label>
                   </div>
-
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Enviar Informacion</button>
                 </div>
 
               </div>
-            </form>
-          </div><!-- End Contact Form -->
 
-        </div>
+              <div class="col-md-12">
+                <p>Grado Académico:</p>
+                <div class="d-flex justify-content-evenly flex-wrap">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Educacion Media</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Bachillerato</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Licenciatura</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Maestría</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Enviar Informacion</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
+
+      </div>
 
       </div>
 
@@ -296,6 +304,13 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <script src="assets/js/googleMaps.js"></script>
+
+  <!-- Google Map API link -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2366N6fW4p_MjWr7r7X2S_5W7UjF8HE8&callback=initMap&loading=async&libraries=marker" async defer></script>
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

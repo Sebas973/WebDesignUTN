@@ -16,7 +16,6 @@ function cargarPortafolio() {
           </div>
         </div>
       `;
-
             $('#InstagramPostsContainer').append(cardHTML);
         })
         window.instgrm.Embeds.process()
