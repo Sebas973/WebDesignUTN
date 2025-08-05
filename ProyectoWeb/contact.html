@@ -154,7 +154,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form class="form-control" data-aos="fade-up" data-aos-delay="400">
+            <form id="formulario-contacto" class="form-control pt-4" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
                 <h1 class="text-center">Agenda tu cita:</h1>
                 <div class="col-md-6">
@@ -169,10 +169,11 @@
 
                 <div class="col-md-12">
                   <p>Fecha de Nacimiento:</p>
-                  <input type="date" class="form-control" name="fechaNacimiento" placeholder="" required="" onchange="">
+                  <input type="date" class="form-control" name="fechaNacimiento" placeholder="" required=""
+                    onchange="calcularEdad()">
                 </div>
 
-                <div id="edad" style="visibility: hidden;"></div>
+                <div id="edad" style="display: none;"></div>
 
                 <div class="col-md-12">
                   <p>Rango de Ingreso:</p>
@@ -183,13 +184,11 @@
                   <p>Género:</p>
                   <div class="d-flex justify-content-evenly flex-wrap">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioFemenino"
-                        value="F">
+                      <input class="form-check-input" type="radio" name="genero" id="radioFemenino" value="F" required>
                       <label class="form-check-label" for="inlineRadio1">Femenino</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioMasculino"
-                        value="M">
+                      <input class="form-check-input" type="radio" name="genero" id="radioMasculino" value="M">
                       <label class="form-check-label" for="inlineRadio2">Masculino</label>
                     </div>
                   </div>
@@ -200,28 +199,33 @@
                   <p>Grado Académico:</p>
                   <div class="d-flex justify-content-evenly flex-wrap">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="checkboxMedia" name="gradoAcademico" value="media">
+                      <input class="form-check-input" type="checkbox" id="checkboxMedia" name="gradoAcademico"
+                        value="media">
                       <label class="form-check-label" for="checkboxMedia">Educacion Media</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="checkboxBachi" name="gradoAcademico" value="bachillerato">
+                      <input class="form-check-input" type="checkbox" id="checkboxBachi" name="gradoAcademico"
+                        value="bachillerato">
                       <label class="form-check-label" for="checkboxBachi">Bachillerato</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="checkboxLic" name="gradoAcademico" value="licenciatura">
+                      <input class="form-check-input" type="checkbox" id="checkboxLic" name="gradoAcademico"
+                        value="licenciatura">
                       <label class="form-check-label" for="checkboxLic">Licenciatura</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" id="checkboxMaes" name="gradoAcademico" value="maestria">
+                      <input class="form-check-input" type="checkbox" id="checkboxMaes" name="gradoAcademico"
+                        value="maestria">
                       <label class="form-check-label" for="checkboxMaes">Maestría</label>
                     </div>
                   </div>
 
-                </div class="justify-content-center">
-                  <button class="btn btn-primary w-50 " type="submit" onclick="guardarFormulario()">Enviar Informacion</button>
-                </div>
+                  <div class="col-md-12 d-flex justify-content-center m-3">
+                    <button class="btn btn-primary w-50 " type="submit" onclick="guardarFormulario(event)">Enviar
+                      Informacion</button>
+                  </div>
 
-              </div>
+                </div>
             </form>
           </div><!-- End Contact Form -->
 

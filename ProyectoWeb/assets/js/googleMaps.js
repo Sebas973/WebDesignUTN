@@ -1,11 +1,8 @@
-
 let map;
 
-// Coordenadas del destino (ejemplo: Parroquia de San Isidro)
 const destino = { lat: 10.080037, lng: -84.192374 };
 
 async function initMap() {
-    // Intentar obtener la ubicación del usuario
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
             const origen = {
@@ -19,7 +16,6 @@ async function initMap() {
                 mapId: "226b17618f1322597574c765"
             });
 
-            // Marcadores
             new google.maps.marker.AdvancedMarkerElement({
                 position: origen,
                 map: map,
@@ -29,7 +25,7 @@ async function initMap() {
             new google.maps.marker.AdvancedMarkerElement({
                 position: destino,
                 map: map,
-                title: "Empresa"
+                title: "Valerita's Nails"
             });
 
             // Direcciones
