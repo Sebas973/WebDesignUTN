@@ -2549,3 +2549,8 @@ section,
   max-width: 100% !important;
   width: 100% !important;
 }
+
+#map {
+  height: 450px;
+  width: 100%;
+}
